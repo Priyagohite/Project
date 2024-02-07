@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTDOWN TIMER</title>
+<style>
+         body {
+            background-image:url("https://images.unsplash.com/photo-1526648856597-c2b6745ad7bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0Y2glMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+            color:white;
+            }
+         div#st {
+            background-color: darkgray;
+            box-shadow:10px 10px 10px black;
+            width: 450px;
+            height: 70px;
+            border: blanchedalmond 3px solid;
+            padding: 20px;
+            }
+
+        div#sw {
+            background-color:#DF2C4A ;
+            border: 2px darkgrey solid;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px black;
+            margin-right: auto;
+            margin-left: auto;
+            width: 300px;
+            height: 30px;
+            padding: 8px;
+        }  
+</style>
+</head>
+<body>
+  <center>
+    <h1 style="color:black;">COUNTDOWN TIMER</h1>
+    <button onclick="time = setInterval(start,10)">Start the stopwatch </button>
+    <button onclick="stop_time()">Pause the stopwatch</button>
+    <button onclick="reset()">Reset the stopwatch</button>
+    <div id="st">
+        <div id="sw">
+            <b>
+                <p id="sh" style="color: black; text-align:center; text-shadow: 10px;"></p>
+            </b>
+        </div>
+        <script>
+            var hrs = 0o0;
+            var min = 0o0;
+            var sec = 0o0;
+            var ms = 0o0;
+            var time;
+            function start() {
+                ms = ms + 1;
+                if (ms == 100) {
+                    sec = sec + 1;
+                    ms = 0o0;
+                }
+                else if (sec == 60) {
+                    min = min + 1;
+                    sec = 0o0;
+                    ms = 0o0;
+                }
+                else if (min == 60) {
+                    hrs = hrs + 1;
+                    min = 0o0;
+                    sec = 0o0;
+                    ms = 0o0;
+                }
+                document.getElementById("sh").innerHTML = hrs + " : " + min + " : " + sec + " : " + ms;
+            }
+            function stop_time() {
+                clearInterval(time);
+            }
+            function reset() {
+                clearInterval(time);
+                sec = 0o0;
+                min = 0o0;
+                hrs = 0o0;
+                ms = 0o0;
+                document.getElementById("sh").innerHTML = hrs + " : " + min + " : " + sec + " : " + ms;
+            }
+        </script>
+    </div>
+       </center>
+      </body>
+</html>   -->
